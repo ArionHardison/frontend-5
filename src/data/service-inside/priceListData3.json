@@ -1,0 +1,24 @@
+{
+    "priceListData3": [
+        {
+            "id": 1,
+            "title": "All hair color",
+            "price": "From 35 $"
+        },
+        {
+            "id": 2,
+            "title": "Root color",
+            "price": "From 35 $"
+        },
+        {
+            "id": 3,
+            "title": "Highlights",
+            "price": "From 35 $"
+        },
+        {
+            "id": 4,
+            "title": "Hair toning",
+            "price": "From 35 $"
+        }
+    ]
+}

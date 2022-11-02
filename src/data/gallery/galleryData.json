@@ -1,0 +1,34 @@
+{
+    "galleryData": [
+        {
+            "id": 1,
+            "title": "Face & Body | Image 1",
+            "imgSrc": "assets/img/placeholder/780x500.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Hair Treatments | Image 2",
+            "imgSrc": "assets/img/placeholder/780x500.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Hands & Feets | Image 3",
+            "imgSrc": "assets/img/placeholder/780x500.jpg"
+        },
+        {
+            "id": 4,
+            "title": "Haircuts for Men | Image 4",
+            "imgSrc": "assets/img/placeholder/780x500.jpg"
+        },
+        {
+            "id": 5,
+            "title": "Hair | Image 5",
+            "imgSrc": "assets/img/placeholder/780x500.jpg"
+        },
+        {
+            "id": 6,
+            "title": "Manicure | Image 6",
+            "imgSrc": "assets/img/placeholder/780x500.jpg"
+        }
+    ]
+}
