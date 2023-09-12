@@ -1,0 +1,19 @@
+{
+    "cloudData": [
+        {
+            "id": 1,
+            "title": "Management",
+            "link": "/news"
+        },
+        {
+            "id": 2,
+            "title": "Event",
+            "link": "/news"
+        },
+        {
+            "id": 4,
+            "title": "Agency",
+            "link": "/news"
+        }
+    ]
+}

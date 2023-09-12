@@ -1,0 +1,24 @@
+{
+    "categoriesData": [
+        {
+            "id": 1,
+            "title": "Event",
+            "link": "/news"
+        },
+        {
+            "id": 2,
+            "title": "Business",
+            "link": "/news"
+        },
+        {
+            "id": 3,
+            "title": "Agency",
+            "link": "/news"
+        },
+        {
+            "id": 4,
+            "title": "Management",
+            "link": "/news"
+        }
+    ]
+}

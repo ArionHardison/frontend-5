@@ -1,0 +1,28 @@
+{
+    "recentCommentsData": [
+        {
+            "id": 1,
+            "author": "Andres White",
+            "title": "Lorem ipsum dolor sit amet, consectetur adipisc.",
+            "link": "/news-single-post#comments"
+        },
+        {
+            "id": 2,
+            "author": "Andres White",
+            "title": "Lorem ipsum dolor sit amet, consectetur adipisc.",
+            "link": "/news-single-post#comments"
+        },
+        {
+            "id": 3,
+            "author": "Andres White",
+            "title": "Lorem ipsum dolor sit amet, consectetur adipisc.",
+            "link": "/news-single-post#comments"
+        },
+        {
+            "id": 4,
+            "author": "Andres White",
+            "title": "Lorem ipsum dolor sit amet, consectetur adipisc.",
+            "link": "/news-single-post#comments"
+        }
+    ]
+}

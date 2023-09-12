@@ -1,0 +1,28 @@
+{
+    "partnersData": [
+        {
+            "id": 1,
+            "imgSrc": "/assets/img/demo/10_img.jpg"
+        },
+        {
+            "id": 2,
+            "imgSrc": "/assets/img/demo/11_img.jpg"
+        },
+        {
+            "id": 3,
+            "imgSrc": "/assets/img/demo/08_img.jpg"
+        },
+        {
+            "id": 4,
+            "imgSrc": "/assets/img/demo/09_img.jpg"
+        },
+        {
+            "id": 5,
+            "imgSrc": "/assets/img/demo/10_img.jpg"
+        },
+        {
+            "id": 6,
+            "imgSrc": "/assets/img/demo/11_img.jpg"
+        }
+    ]
+}

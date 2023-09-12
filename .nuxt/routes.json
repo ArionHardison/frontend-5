@@ -1,0 +1,72 @@
+[
+  {
+    "name": "about-us",
+    "path": "/about-us",
+    "component": "/usr/src/app/pages/about-us/index.vue",
+    "chunkName": "pages/about-us/index",
+    "_name": "_2a26929e"
+  },
+  {
+    "name": "contacts",
+    "path": "/contacts",
+    "component": "/usr/src/app/pages/contacts/index.vue",
+    "chunkName": "pages/contacts/index",
+    "_name": "_54818834"
+  },
+  {
+    "name": "follow-program",
+    "path": "/follow-program",
+    "component": "/usr/src/app/pages/follow-program/index.vue",
+    "chunkName": "pages/follow-program/index",
+    "_name": "_3a8577bb"
+  },
+  {
+    "name": "news",
+    "path": "/news",
+    "component": "/usr/src/app/pages/news/index.vue",
+    "chunkName": "pages/news/index",
+    "_name": "_fba9bb34"
+  },
+  {
+    "name": "news-single-post",
+    "path": "/news-single-post",
+    "component": "/usr/src/app/pages/news-single-post/index.vue",
+    "chunkName": "pages/news-single-post/index",
+    "_name": "_119cb89e"
+  },
+  {
+    "name": "search-results",
+    "path": "/search-results",
+    "component": "/usr/src/app/pages/search-results/index.vue",
+    "chunkName": "pages/search-results/index",
+    "_name": "_22e228e4"
+  },
+  {
+    "name": "service-inside",
+    "path": "/service-inside",
+    "component": "/usr/src/app/pages/service-inside/index.vue",
+    "chunkName": "pages/service-inside/index",
+    "_name": "_f4467b32"
+  },
+  {
+    "name": "services",
+    "path": "/services",
+    "component": "/usr/src/app/pages/services/index.vue",
+    "chunkName": "pages/services/index",
+    "_name": "_6482cb9e"
+  },
+  {
+    "name": "ui",
+    "path": "/ui",
+    "component": "/usr/src/app/pages/ui/index.vue",
+    "chunkName": "pages/ui/index",
+    "_name": "_781456e7"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/usr/src/app/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_e542f99c"
+  }
+]

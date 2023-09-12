@@ -1,0 +1,32 @@
+{
+    "teamData": [
+        {
+            "id": 1,
+            "position": "Sales Manager",
+            "imgSrc": "assets/img/placeholder/363x531.jpg",
+            "tel": "+432 533 12 523",
+            "email": "info@company.com"
+        },
+        {
+            "id": 2,
+            "position": "Audio Manager",
+            "imgSrc": "assets/img/placeholder/363x531.jpg",
+            "tel": "+432 533 12 523",
+            "email": "info@company.com"
+        },
+        {
+            "id": 3,
+            "position": "Designer",
+            "imgSrc": "assets/img/placeholder/363x531.jpg",
+            "tel": "+432 533 12 523",
+            "email": "info@company.com"
+        },
+        {
+            "id": 4,
+            "position": "CEO",
+            "imgSrc": "assets/img/placeholder/363x531.jpg",
+            "tel": "+432 533 12 523",
+            "email": "info@company.com"
+        }
+    ]
+}

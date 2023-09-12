@@ -1,0 +1,53 @@
+{
+    "searchItems": [
+        {
+            "id": 1,
+            "title": "Neque porro Title est qui dolorem at vero do",
+            "category": "Event",
+            "categoryLink": "/news",
+            "link": "/news-single-post",
+            "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores."
+        },
+        {
+            "id": 2,
+            "title": "Neque porro Title est qui dolorem at vero do",
+            "category": "Event",
+            "categoryLink": "/news",
+            "link": "/news-single-post",
+            "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores."
+        },
+        {
+            "id": 3,
+            "title": "Neque porro Title est qui dolorem at vero do",
+            "category": "Event",
+            "categoryLink": "/news",
+            "link": "/news-single-post",
+            "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores."
+        },
+        {
+            "id": 4,
+            "title": "Neque porro Title est qui dolorem at vero do",
+            "category": "Event",
+            "categoryLink": "/news",
+            "link": "/news-single-post",
+            "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores."
+        },
+        {
+            "id": 5,
+            "title": "Neque porro Title est qui dolorem at vero do",
+            "category": "Event",
+            "categoryLink": "/news",
+            "link": "/news-single-post",
+            "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores."
+        },
+        {
+            "id": 6,
+            "title": "Neque porro Title est qui dolorem at vero do",
+            "category": "Event",
+            "categoryLink": "/news",
+            "link": "/news-single-post",
+            "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores."
+        }
+    ]
+    
+}
