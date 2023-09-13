@@ -27,6 +27,11 @@ export default {
       const diff = end.diff(now, ["days", "hours", "minutes", "seconds"]);
       return diff.toObject();
     },
+    fromIso(time){
+      return DateTime.fromISO(time)
+              .setZone(this.timezone, { keepCalendarTime: true })
+              .setLocale("en-US");
+    },
     difference(date) {
       const now = this.now();
       const start = DateTime.fromISO(date);

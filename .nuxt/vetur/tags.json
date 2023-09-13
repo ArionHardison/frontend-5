@@ -1,4 +1,7 @@
 {
+  "PageTitle": {
+    "description": "Auto imported from components/PageTitle.vue"
+  },
   "ButtonBackToHome": {
     "description": "Auto imported from components/Button/BackToHome.vue"
   },
@@ -8,14 +11,8 @@
   "ButtonSearchModalButton": {
     "description": "Auto imported from components/Button/SearchModalButton.vue"
   },
-  "FormsCommentForm": {
-    "description": "Auto imported from components/Forms/CommentForm.vue"
-  },
-  "FormsContactsForm": {
-    "description": "Auto imported from components/Forms/ContactsForm.vue"
-  },
-  "FormsSearchForm": {
-    "description": "Auto imported from components/Forms/SearchForm.vue"
+  "Loading": {
+    "description": "Auto imported from components/Loading/Loading.vue"
   },
   "Loadmore": {
     "description": "Auto imported from components/Loadmore/Loadmore.vue"
@@ -26,11 +23,35 @@
   "ModalSearchModal": {
     "description": "Auto imported from components/Modal/SearchModal.vue"
   },
+  "FormsCommentForm": {
+    "description": "Auto imported from components/Forms/CommentForm.vue"
+  },
+  "FormsContactsForm": {
+    "description": "Auto imported from components/Forms/ContactsForm.vue"
+  },
+  "FormsResetPasswordForm": {
+    "description": "Auto imported from components/Forms/ResetPasswordForm.vue"
+  },
+  "FormsSearchForm": {
+    "description": "Auto imported from components/Forms/SearchForm.vue"
+  },
+  "FormsSignInForm": {
+    "description": "Auto imported from components/Forms/SignInForm.vue"
+  },
+  "FormsSignUpForm": {
+    "description": "Auto imported from components/Forms/SignUpForm.vue"
+  },
   "ProgramFollowProgramComponent": {
     "description": "Auto imported from components/Program/FollowProgramComponent.vue"
   },
-  "Loading": {
-    "description": "Auto imported from components/Loading/Loading.vue"
+  "PagesPrograms": {
+    "description": "Auto imported from components/pages/Programs.vue"
+  },
+  "PagesSidebar": {
+    "description": "Auto imported from components/pages/Sidebar.vue"
+  },
+  "UiAvatar": {
+    "description": "Auto imported from components/ui/Avatar.vue"
   },
   "FormsFieldsCheckboxField": {
     "description": "Auto imported from components/Forms/Fields/CheckboxField.vue"
@@ -110,9 +131,6 @@
   "Blocks404PageTitle": {
     "description": "Auto imported from components/blocks/404/PageTitle.vue"
   },
-  "BlocksGeneralModalMenuPrimary": {
-    "description": "Auto imported from components/blocks/General/ModalMenuPrimary.vue"
-  },
   "BlocksAboutUsAboutsUs": {
     "description": "Auto imported from components/blocks/about-us/Abouts-us.vue"
   },
@@ -124,6 +142,9 @@
   },
   "BlocksContactsPageTitle": {
     "description": "Auto imported from components/blocks/contacts/PageTitle.vue"
+  },
+  "BlocksGeneralModalMenuPrimary": {
+    "description": "Auto imported from components/blocks/General/ModalMenuPrimary.vue"
   },
   "BlocksFooter": {
     "description": "Auto imported from components/blocks/footer/Footer.vue"
@@ -190,6 +211,9 @@
   },
   "BlocksSidebarCategories": {
     "description": "Auto imported from components/blocks/sidebar/Categories.vue"
+  },
+  "BlocksSidebarProgramCategories": {
+    "description": "Auto imported from components/blocks/sidebar/ProgramCategories.vue"
   },
   "BlocksSidebarRecentComments": {
     "description": "Auto imported from components/blocks/sidebar/RecentComments.vue"

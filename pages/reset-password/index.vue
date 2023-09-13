@@ -5,7 +5,7 @@
     <Header logoColor='dark'/>
 
     <main id="main" class="site-main">
-      <PageTitle title="Follow Program"/>
+      <PageTitle title="Reset password"/>
 
       <div id="page-content" class="spacer p-top-xl">
         <div class="wrapper">
@@ -13,7 +13,7 @@
             <div id="single">
               <div class="row gutter-width-sm">
                 <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-xl-4 offset-xl-4 col-12">
-                  <FollowProgramComponent/>
+                    <ResetPasswordForm/>
                 </div>
               </div>
             </div>
@@ -30,15 +30,17 @@
 import Loading from '~/components/Loading/Loading';
 import Header from '~/components/blocks/header/Header';
 import Footer from '~/components/blocks/footer/Footer';
+import SignInForm from "../../components/Forms/SignInForm";
 import PageTitle from '~/components/PageTitle';
-import FollowProgramComponent from "~/components/Program/FollowProgramComponent.vue";
+import ResetPasswordForm from "../../components/Forms/ResetPasswordForm.vue";
 
 export default {
   components: {
+    ResetPasswordForm,
     Loading,
     Header,
+    SignInForm,
     PageTitle,
-    FollowProgramComponent,
     Footer
   },
   mounted: function() {
@@ -48,7 +50,7 @@ export default {
     document.body.classList.remove( 'single-post' );
   },
   metaInfo: {
-    title: 'Follow Program',
+    title: 'Reset Password',
     titleTemplate: '%s'
   }
 }

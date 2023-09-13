@@ -31,8 +31,9 @@ import PageTitle from '~/components/blocks/index/PageTitle';
 import AboutUs from '~/components/blocks/index/About-us';
 import Services from '~/components/blocks/index/Services';
 import Partners from '~/components/blocks/index/Partners';
-
+import api from "../mixins/api";
 export default {
+  mixins: [api],
   components: {
     Loading,
     Header,
@@ -41,6 +42,21 @@ export default {
     Services,
     Partners,
     Footer
+  },
+  data() {
+    return {
+      entities: {}
+    }
+  },
+  async created() {
+    const entities = await this.get(`public/get-entities/home`)
+    let sortedEntities = {};
+    if(entities) {
+      for (let entity of entities) {
+        sortedEntities[entity.entity_call] = entity;
+      }
+    }
+    this.entities = sortedEntities;
   },
   mounted: function() {
     document.body.classList.add( 'home' );

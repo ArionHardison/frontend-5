@@ -7,6 +7,13 @@
     "_name": "_2a26929e"
   },
   {
+    "name": "account",
+    "path": "/account",
+    "component": "/usr/src/app/pages/account/index.vue",
+    "chunkName": "pages/account/index",
+    "_name": "_079375d0"
+  },
+  {
     "name": "contacts",
     "path": "/contacts",
     "component": "/usr/src/app/pages/contacts/index.vue",
@@ -21,18 +28,18 @@
     "_name": "_3a8577bb"
   },
   {
-    "name": "news",
-    "path": "/news",
-    "component": "/usr/src/app/pages/news/index.vue",
-    "chunkName": "pages/news/index",
-    "_name": "_fba9bb34"
+    "name": "programs",
+    "path": "/programs",
+    "component": "/usr/src/app/pages/programs/index.vue",
+    "chunkName": "pages/programs/index",
+    "_name": "_016b9b02"
   },
   {
-    "name": "news-single-post",
-    "path": "/news-single-post",
-    "component": "/usr/src/app/pages/news-single-post/index.vue",
-    "chunkName": "pages/news-single-post/index",
-    "_name": "_119cb89e"
+    "name": "reset-password",
+    "path": "/reset-password",
+    "component": "/usr/src/app/pages/reset-password/index.vue",
+    "chunkName": "pages/reset-password/index",
+    "_name": "_27596b6c"
   },
   {
     "name": "search-results",
@@ -56,6 +63,20 @@
     "_name": "_6482cb9e"
   },
   {
+    "name": "sign-in",
+    "path": "/sign-in",
+    "component": "/usr/src/app/pages/sign-in/index.vue",
+    "chunkName": "pages/sign-in/index",
+    "_name": "_6c5c3650"
+  },
+  {
+    "name": "sign-up",
+    "path": "/sign-up",
+    "component": "/usr/src/app/pages/sign-up/index.vue",
+    "chunkName": "pages/sign-up/index",
+    "_name": "_4fef0ace"
+  },
+  {
     "name": "ui",
     "path": "/ui",
     "component": "/usr/src/app/pages/ui/index.vue",
@@ -68,5 +89,26 @@
     "component": "/usr/src/app/pages/index.vue",
     "chunkName": "pages/index",
     "_name": "_e542f99c"
+  },
+  {
+    "name": "program-id",
+    "path": "/program/:id?",
+    "component": "/usr/src/app/pages/program/_id.vue",
+    "chunkName": "pages/program/_id",
+    "_name": "_0a4df98f"
+  },
+  {
+    "name": "programs-category",
+    "path": "/programs/:category",
+    "component": "/usr/src/app/pages/programs/_category/index.vue",
+    "chunkName": "pages/programs/_category/index",
+    "_name": "_31e6dfd0"
+  },
+  {
+    "name": "programs-category-tag",
+    "path": "/programs/:category/:tag",
+    "component": "/usr/src/app/pages/programs/_category/_tag.vue",
+    "chunkName": "pages/programs/_category/_tag",
+    "_name": "_22d0b9cd"
   }
 ]

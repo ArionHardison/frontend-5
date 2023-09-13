@@ -15,7 +15,7 @@
                             </div>
 
                             <div class="modal-body modal-body-centered">
-                                <SearchForm />
+                                <SearchForm redirect path="/programs" @search="closeModal"/>
                             </div>
                         </div>
                     </div>

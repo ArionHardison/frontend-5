@@ -79,6 +79,22 @@ export default {
     ContactsForm,
     Footer
   },
+  data(){
+    return {
+      containers: {}
+    }
+  },
+  async created() {
+    const containers = await this.get("public/get-containers/contacts|cformitems|contactpage")
+
+    let sortedContainers = {};
+    if(containers) {
+      for (let container of containers) {
+        sortedContainers[container.container_call] = container;
+      }
+    }
+    this.containers = sortedContainers;
+  },
   mounted: function() {
     document.body.classList.add( 'page' );
   },

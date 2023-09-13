@@ -1,22 +1,21 @@
 <template>
     <div class="meta">
         <p>
-            <span class="date">29 April, 2020</span>
-            <span>
-                <router-link to="/news-single-post">By admin</router-link>
-            </span>
-            <span>-</span>
-            <span>Comments (1)</span>
-            <span>-</span>
-            <span class="category">
-                <router-link title="Event" to="/news">Event</router-link>
-            </span>
+            <span class="date">{{ fromIso(program.created_at).day }}</span> {{ fromIso(program.created_at).monthShort}}</span>
         </p>
     </div>
 </template>
 
 <script>
+    import time from "../../../mixins/time";
     export default {
-        name: 'Meta'
+        name: 'Meta',
+        mixins: [time],
+        props: {
+          program: {
+            type: Object,
+            default: {}
+          }
+        }
     }
 </script>

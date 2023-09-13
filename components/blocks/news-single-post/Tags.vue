@@ -1,15 +1,21 @@
 <template>
     <div class="tags">
         <p>
-            <router-link title="Management" to="/news">Management</router-link>
-            <router-link title="Event" to="/news">Event</router-link>
-            <router-link title="Agency" to="/news">Agency</router-link>
+          <template v-for="tag in tags">
+            <nuxt-link :title="tag.tag_name" :to="`/programs/0-all-categories/${tag.id}-${tag.tag_name}`">{{tag.tag_name}}</nuxt-link>
+          </template>
         </p>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'Tags'
+        name: 'Tags',
+        props: {
+          tags: {
+            type: Array,
+            default: [],
+          }
+        }
     }
 </script>

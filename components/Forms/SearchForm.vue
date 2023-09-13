@@ -1,38 +1,70 @@
 <template>
-    <form class="search-form" role="search" method="get" :action="urlAction">
-        <div class="search input-group">
-            <input class="form-lg" type="text" placeholder="Type to search" name="s">
+  <form class="search-form" role="search" @submit.prevent="runSearch">
+    <div class="search input-group">
+      <input
+          class="form-control form-control-lg"
+          type="text"
+          placeholder="Search"
+          v-model="searchQuery"
+          @input="autoSearch"
+          name="s"
+      />
 
-            <div class="input-group-append">
-                <button type="submit" class="btn btn-link border-0 p-0 min-w-auto">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
-        </div>
-    </form>
+      <div class="input-group-append">
+        <button
+            type="button"
+            @click="runSearch"
+            class="btn btn-lg btn-link border-0 p-0 min-w-auto link-no-space"
+        >
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+  </form>
 </template>
 
 <script>
-    export default {
-        name: 'SearchForm',
-        data() {
-            return {
-                urlAction: null
-            }
-        },
-      created() {
-          this.urlAction = this.getUrlAction();
-      },
-      methods: {
-          getUrlAction(){
-            if(process.client){
-              return window.location.origin + this.$router.resolve( {
-                name: 'search-results',
-                params: { id: 1 }
-              } ).href
-            }
-            return  "/"
-          }
-        }
+export default {
+  name: "SearchForm",
+  props: {
+    redirect: {
+      type: Boolean,
+      default: true
+    },
+    path: {
+      type: String,
+      default: "",
     }
+  },
+  data() {
+    return {
+      searchQuery: "",
+      searchTimeout: null,
+    };
+  },
+  created() {
+    this.searchQuery = this.$route.query.s ? this.$route.query.s : "";
+  },
+  methods: {
+    autoSearch(){
+      if(this.searchQuery.trim().length<=3 && this.searchQuery.trim().length>1){
+        return;
+      }
+      clearTimeout(this.searchTimeout);
+      this.searchTimeout = setTimeout(()=>{
+        this.runSearch();
+      }, 500);
+    },
+    runSearch(){
+      this.$emit("search");
+      setTimeout(()=>{
+        if(this.redirect){
+          this.$router.push({path: this.path, query: {s: this.searchQuery}});
+        }else {
+          this.$router.push({path: this.$route.fullPath, query: {s: this.searchQuery}});
+        }
+      }, 150)
+    }
+  }
+};
 </script>

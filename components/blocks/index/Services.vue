@@ -8,33 +8,38 @@
 
         <div class="services">
             <div class="items clearfix">
-                <router-link v-for="serviceItem in serviceItems" :key="serviceItem.id" class="item" :to="serviceItem.link">
+                <nuxt-link v-for="program in programs.data" :key="program.id" class="item"  :to="`/program/${$slug(program.id, program.name)}`">
                     <div class="item-content">
-                        <h4 class="item-title">{{ serviceItem.title }}</h4>
+                        <h4 class="item-title">{{ program.name }}</h4>
                     </div>
 
                     <div class="img object-fit">
                         <div class="object-fit-cover">
-                            <img :src="serviceItem.imgSrc" :alt="serviceItem.title">
+                            <img :src="$imageUrl('md', program.program_image, false)" :alt="program.name">
                         </div>
                     </div>
 
                     <div class="img-bg-color"></div>
-                </router-link>
+                </nuxt-link>
             </div>
         </div>
     </section>
 </template>
 
 <script>
-    import ServicesData from '~/data/services/servicesData.json';
-
+    import api from "../../../mixins/api";
     export default {
         name: 'services',
+        mixins: [api],
         data() {
             return {
-                serviceItems: ServicesData.servicesData
+              programs: {
+                data: []
+              },
             }
-        }
+        },
+        async mounted() {
+          this.programs = await this.get("public/get-recent-programs");
+        },
     }
 </script>

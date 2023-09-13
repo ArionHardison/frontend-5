@@ -18,8 +18,6 @@
 
                 <div class="col-xl-8 col-lg-8  col-md-12 order-0 order-lg-1 order-xl-1 style-default">
                   <NewsBlog />
-
-                  <LoadMore />
                 </div>
               </div>
             </div>
@@ -40,7 +38,6 @@ import Footer from '~/components/blocks/footer/Footer';
 import PageTitle from '~/components/blocks/news/PageTitle';
 import Sidebar from '~/components/blocks/news/Sidebar';
 import NewsBlog from '~/components/blocks/news/Blog';
-import LoadMore from '~/components/Loadmore/Loadmore';
 
 export default {
   components: {
@@ -49,7 +46,6 @@ export default {
     PageTitle,
     Sidebar,
     NewsBlog,
-    LoadMore,
     Footer
   },
   mounted: function() {

@@ -69,10 +69,25 @@
             SearchModal,
             FooterMenuSecondary
         },
+        data() {
+          return {
+            entities: {}
+          }
+        },
         computed: {
             currentPage() {
                 return this.$route.path;
             }
+        },
+        async created(){
+          const entities = await this.get(`public/get-entities/footer`)
+          let sortedEntities = {};
+          if(entities) {
+            for (let entity of entities) {
+              sortedEntities[entity.entity_call] = entity;
+            }
+          }
+          this.entities = sortedEntities;
         }
     }
 </script>

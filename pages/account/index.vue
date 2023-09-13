@@ -5,15 +5,15 @@
     <Header logoColor='dark'/>
 
     <main id="main" class="site-main">
-      <PageTitle title="Follow Program"/>
+      <PageTitle title="My Account"/>
 
       <div id="page-content" class="spacer p-top-xl">
         <div class="wrapper">
           <div class="content">
             <div id="single">
               <div class="row gutter-width-sm">
-                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-xl-4 offset-xl-4 col-12">
-                  <FollowProgramComponent/>
+                <div class="col-lg-12">
+
                 </div>
               </div>
             </div>
@@ -31,15 +31,35 @@ import Loading from '~/components/Loading/Loading';
 import Header from '~/components/blocks/header/Header';
 import Footer from '~/components/blocks/footer/Footer';
 import PageTitle from '~/components/PageTitle';
-import FollowProgramComponent from "~/components/Program/FollowProgramComponent.vue";
-
+import api from "../../mixins/api";
 export default {
+  mixins: [api],
   components: {
     Loading,
     Header,
     PageTitle,
-    FollowProgramComponent,
     Footer
+  },
+  data() {
+    return {
+      programs: [],
+      userData: null,
+      tasks: [],
+    }
+  },
+  middleware: "user",
+  async created() {
+    this.programs = await this.get("personal-chain");
+    this.userData = await this.get("user/get-data");
+    await this.getTasks();
+  },
+  methods: {
+    async getTasks() {
+      const data = await this.get("personal-chain/tasks");
+      if(data){
+        this.tasks = data;
+      }
+    },
   },
   mounted: function() {
     document.body.classList.add( 'single-post' );
@@ -48,7 +68,7 @@ export default {
     document.body.classList.remove( 'single-post' );
   },
   metaInfo: {
-    title: 'Follow Program',
+    title: 'My Account',
     titleTemplate: '%s'
   }
 }
