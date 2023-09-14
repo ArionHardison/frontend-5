@@ -1,13 +1,13 @@
 <template>
-    <form v-on:submit.prevent="submitForm" method="post" action="form.php" id="cf-1" class="contact-form">
+    <form v-on:submit.prevent="submitForm" method="post"  id="cf-1" class="contact-form">
         <div class="form-group form-group-xs form-lg-no-space">
             <p class="input-group gutter-width-xs no-space">
                 <span class="gutter-width">
-                    <input v-model="form.name" name="cf-1-name" type="text" class="font-size-lg pt-0" id="cf-1-name" placeholder="Name" required="required">
+                     <InputField v-model="form.name" name="cfname" type="text" placeholder="Name" :lg="false" :label="false" class-name="font-size-lg pt-0" />
                 </span>
 
                 <span class="gutter-width">
-                    <input v-model="form.email" name="cf-1-email" type="email" class="font-size-lg pt-0" id="cf-1-email" placeholder="Email" required="required">
+                  <InputField v-model="form.email" name="cfemail" type="email" placeholder="Email" :lg="false" :label="false" class-name="font-size-lg pt-0" />
                 </span>
             </p>
         </div>
@@ -15,17 +15,17 @@
         <div class="form-group form-group-xs form-lg-no-space">
             <p class="input-group gutter-width-xs no-space">
                 <span class="gutter-width">
-                    <input v-model="form.phone" name="cf-1-phone" type="text" class="font-size-lg pt-0" id="cf-1-phone" placeholder="Phone no." required="required">
+                  <InputField v-model="form.phone" name="cfphone" type="text" placeholder="Phone no." :lg="false" :label="false" class-name="font-size-lg pt-0" />
                 </span>
 
                 <span class="gutter-width">
-                    <input v-model="form.subject" name="cf-1-subject" type="text" class="font-size-lg pt-0" id="cf-1-subject" placeholder="Subject" required="required">
+                  <InputField v-model="form.subject" name="subject" type="text" placeholder="Subject" :lg="false" :label="false" class-name="font-size-lg pt-0" />
                 </span>
             </p>
         </div>
 
         <div class="form-group form-group-xs form-lg-no-space">
-            <textarea v-model="form.message" name="cf-1-message" class="font-size-lg pt-0" id="cf-1-message" placeholder="Message" required="required"></textarea>
+            <TextareaField v-model="form.message" name="message" placeholder="Message" custom-class="font-size-lg pt-0"/>
         </div>
 
         <div class="form-group form-group-xs">
@@ -41,10 +41,14 @@
 </template>
 
 <script>
-    import axios from 'axios';
+    import api from "../../mixins/api";
+    import InputField from "./Fields/InputField.vue";
+    import TextareaField from "./Fields/TextareaField.vue";
 
     export default {
-        name: 'ContactsForm',
+      name: 'ContactsForm',
+      mixins: [api],
+      components: {TextareaField, InputField},
         data() {
             return {
                 form: {
@@ -63,40 +67,18 @@
             }
         },
         methods: {
-            async submitForm() {
-                axios.post( 'https://store.adveits.com/API/form.php', this.form, {
-                    headers: {
-                        'Access-Control-Allow-Origin': '*',
-                        'Content-Type': 'application/json; charset=UTF-8'
-                    },
-                }, ).then( response => {
-                    if ( response.data.status === 'success' ) {
-                        this.responseMessage = this.successMessage;
-                    }
-
-                    if ( response.data.status === 'warning' ) {
-                        this.responseMessage = this.warningMessage;
-                    }
-
-                    if ( response.data.status === 'error' ) {
-                        this.responseMessage = this.errorMessage;
-                    }
-                    this.alertClass = response.data.status;
-                    this.callAlert  = true;
-
-                    setTimeout( () => {
-                        this.callAlert = false;
-                    }, 2000 )
-                } ).catch( error => {
-                    this.responseMessage = this.errorMessage;
-                    this.alertClass      = 'danger';
-                    this.callAlert       = true;
-
-                    setTimeout( () => {
-                        this.callAlert = false;
-                    }, 2000 )
-                } );
+          async submitForm() {
+            const requestSent = await this.post("public/store-client-container/cformitems", this.form);
+            if(requestSent){
+              this.form = {
+                name: '',
+                email: '',
+                phone: '',
+                subject: '',
+                message: ''
+              }
             }
+          }
         }
     }
 </script>

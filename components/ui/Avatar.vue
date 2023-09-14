@@ -1,6 +1,8 @@
 <template>
   <div class="custom-avatar">
-    <img :src="$imageUrl(src, 'sm', false)" :alt="alt" :style="avatarStyle" class="img" />
+    <template v-if="src">
+      <img :src="$imageUrl(src, 'sm', false)" :alt="alt" :style="avatarStyle" class="img" />
+    </template>
   </div>
 </template>
 

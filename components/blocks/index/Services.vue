@@ -2,7 +2,7 @@
     <section id="services" class="block-2 spacer p-top-xl">
         <div class="wrapper">
             <div class="title">
-                <h2>Our Services</h2>
+                <h2>Programs</h2>
             </div>
         </div>
 
@@ -15,7 +15,7 @@
 
                     <div class="img object-fit">
                         <div class="object-fit-cover">
-                            <img :src="$imageUrl('md', program.program_image, false)" :alt="program.name">
+                            <img :src="$imageUrl(program.program_image, 'md', false)" :alt="program.name">
                         </div>
                     </div>
 
@@ -39,7 +39,18 @@
             }
         },
         async mounted() {
-          this.programs = await this.get("public/get-recent-programs");
+          let programs = await this.get("public/get-recent-programs");
+          this.programs.data = this.getRandomElements(programs.data, 4)
         },
+        methods: {
+          getRandomElements(arr, n) {
+            let tempArr = arr.slice();
+            for (let i = tempArr.length - 1; i > 0; i--) {
+              let j = Math.floor(Math.random() * (i + 1));
+              [tempArr[i], tempArr[j]] = [tempArr[j], tempArr[i]];
+            }
+            return tempArr.slice(0, n);
+          }
+        }
     }
 </script>

@@ -11,18 +11,6 @@
   "ButtonSearchModalButton": {
     "description": "Auto imported from components/Button/SearchModalButton.vue"
   },
-  "Loading": {
-    "description": "Auto imported from components/Loading/Loading.vue"
-  },
-  "Loadmore": {
-    "description": "Auto imported from components/Loadmore/Loadmore.vue"
-  },
-  "ModalMenuModal": {
-    "description": "Auto imported from components/Modal/MenuModal.vue"
-  },
-  "ModalSearchModal": {
-    "description": "Auto imported from components/Modal/SearchModal.vue"
-  },
   "FormsCommentForm": {
     "description": "Auto imported from components/Forms/CommentForm.vue"
   },
@@ -40,6 +28,18 @@
   },
   "FormsSignUpForm": {
     "description": "Auto imported from components/Forms/SignUpForm.vue"
+  },
+  "Loading": {
+    "description": "Auto imported from components/Loading/Loading.vue"
+  },
+  "Loadmore": {
+    "description": "Auto imported from components/Loadmore/Loadmore.vue"
+  },
+  "ModalMenuModal": {
+    "description": "Auto imported from components/Modal/MenuModal.vue"
+  },
+  "ModalSearchModal": {
+    "description": "Auto imported from components/Modal/SearchModal.vue"
   },
   "ProgramFollowProgramComponent": {
     "description": "Auto imported from components/Program/FollowProgramComponent.vue"
@@ -128,6 +128,9 @@
   "ProgramMixinsServerEvents": {
     "description": "Auto imported from components/Program/mixins/server-events.js"
   },
+  "BlocksGeneralModalMenuPrimary": {
+    "description": "Auto imported from components/blocks/General/ModalMenuPrimary.vue"
+  },
   "Blocks404PageTitle": {
     "description": "Auto imported from components/blocks/404/PageTitle.vue"
   },
@@ -143,8 +146,11 @@
   "BlocksContactsPageTitle": {
     "description": "Auto imported from components/blocks/contacts/PageTitle.vue"
   },
-  "BlocksGeneralModalMenuPrimary": {
-    "description": "Auto imported from components/blocks/General/ModalMenuPrimary.vue"
+  "BlocksHeader": {
+    "description": "Auto imported from components/blocks/header/Header.vue"
+  },
+  "BlocksHeaderLogo": {
+    "description": "Auto imported from components/blocks/header/HeaderLogo.vue"
   },
   "BlocksFooter": {
     "description": "Auto imported from components/blocks/footer/Footer.vue"
@@ -166,12 +172,6 @@
   },
   "BlocksIndexServices": {
     "description": "Auto imported from components/blocks/index/Services.vue"
-  },
-  "BlocksHeader": {
-    "description": "Auto imported from components/blocks/header/Header.vue"
-  },
-  "BlocksHeaderLogo": {
-    "description": "Auto imported from components/blocks/header/HeaderLogo.vue"
   },
   "BlocksNewsBlog": {
     "description": "Auto imported from components/blocks/news/Blog.vue"
@@ -305,24 +305,6 @@
   "ProgramWaitComponent": {
     "description": "Auto imported from components/Program/components/program/ProgramWaitComponent.vue"
   },
-  "BlocksUiContentFigures": {
-    "description": "Auto imported from components/blocks/ui/Content/Figures.vue"
-  },
-  "BlocksUiContentIcons": {
-    "description": "Auto imported from components/blocks/ui/Content/Icons.vue"
-  },
-  "BlocksUiContentImages": {
-    "description": "Auto imported from components/blocks/ui/Content/Images.vue"
-  },
-  "BlocksUiContentTables": {
-    "description": "Auto imported from components/blocks/ui/Content/Tables.vue"
-  },
-  "BlocksUiContentTypography": {
-    "description": "Auto imported from components/blocks/ui/Content/Typography.vue"
-  },
-  "BlocksUiContent": {
-    "description": "Auto imported from components/blocks/ui/Content/index.vue"
-  },
   "BlocksUiComponentsAlerts": {
     "description": "Auto imported from components/blocks/ui/Components/Alerts.vue"
   },
@@ -370,6 +352,24 @@
   },
   "BlocksUiComponents": {
     "description": "Auto imported from components/blocks/ui/Components/index.vue"
+  },
+  "BlocksUiContentFigures": {
+    "description": "Auto imported from components/blocks/ui/Content/Figures.vue"
+  },
+  "BlocksUiContentIcons": {
+    "description": "Auto imported from components/blocks/ui/Content/Icons.vue"
+  },
+  "BlocksUiContentImages": {
+    "description": "Auto imported from components/blocks/ui/Content/Images.vue"
+  },
+  "BlocksUiContentTables": {
+    "description": "Auto imported from components/blocks/ui/Content/Tables.vue"
+  },
+  "BlocksUiContentTypography": {
+    "description": "Auto imported from components/blocks/ui/Content/Typography.vue"
+  },
+  "BlocksUiContent": {
+    "description": "Auto imported from components/blocks/ui/Content/index.vue"
   },
   "BlocksUiSidebar": {
     "description": "Auto imported from components/blocks/ui/Sidebar/index.vue"

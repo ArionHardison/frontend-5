@@ -7,8 +7,10 @@
       :error="formErrors[name] ? [...formErrors[name]].shift() : ''"
       :placeholder="placeholder"
       :name="name"
-      class="form-control"
-      :class="errorFields.includes(name) ? 'is-invalid' : null"
+      :class="{
+        'is-invalid': errorFields.includes(name),
+         [customClass]: customClass
+      }"
       :rows="rows"
       :resize="resize"
       @input="changeModelValue"
@@ -30,6 +32,10 @@ export default {
   mixins: [formField],
   props: {
     value: [Number, String],
+    customClass: {
+      type: String,
+      default: "form-control"
+    },
     name: String,
     placeholder: String,
     label: String,

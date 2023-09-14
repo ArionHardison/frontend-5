@@ -7,7 +7,7 @@
     >
       <img
           @click="closeModals"
-          :src="logo"
+          :src="light ? logoLight : logo"
           alt="Logo"
       />
     </router-link>
@@ -17,9 +17,18 @@
 <script>
 export default {
   name: "HeaderLogo",
+  props: {
+    light: {
+      type: Boolean,
+      default: false
+    }
+  },
   computed: {
     logo(){
-      return this.$imageUrl(this.$store.state.tenant.layout.items.logo, 'tb');
+     return this.$imageUrl(this.$store.state.layout.items.logo, 'tb');
+    },
+    logoLight(){
+      return this.$imageUrl(this.$store.state.layout.items.logoLight, 'tb');
     },
     currentPage() {
       return this.$route.path;

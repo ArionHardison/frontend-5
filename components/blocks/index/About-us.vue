@@ -5,18 +5,18 @@
                 <div class="img-no-wrap-1">
                     <div class="img object-fit">
                         <div class="object-fit-cover">
-                            <img src="~/assets/img/placeholder/1487x631.jpg" alt="About Us">
+                            <img :src="$imageUrl(content.timage, 'md')" :alt="content.topTitle">
                         </div>
                     </div>
                 </div>
 
                 <div class="spacer m-top-xl">
                     <div class="title">
-                        <h2>About Us</h2>
+                        <h2>{{content.topTitle}}</h2>
                     </div>
 
                     <div class="description max-width-1">
-                        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the.</p>
+                        <p>{{content.topDescription}}</p>
                     </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                         <div class="img-no-wrap-2">
                             <div class="img object-fit">
                                 <div class="object-fit-cover">
-                                    <img src="~/assets/img/placeholder/660x990.jpg" alt="About Us">
+                                    <img :src="$imageUrl(mission.contImage, 'md')" alt="About Us">
                                 </div>
                             </div>
                         </div>
@@ -35,20 +35,12 @@
 
                     <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 align-self-center col-last">
                         <div class="description max-width-2">
-                            <div class="item">
-                                <h3>Who are we?</h3>
-                                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was bor.</p>
-                            </div>
-
-                            <div class="item">
-                                <h3>Our vision</h3>
-                                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account.</p>
-                            </div>
-
-                            <div class="item">
-                                <h3>Our mission</h3>
-                                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account all this mistaken idea of denouncing.</p>
-                            </div>
+                            <template v-for="singleMission in mission.missionsList">
+                              <div class="item">
+                                  <h3>{{singleMission.missionTitle}}</h3>
+                                  <p>{{singleMission.missionDescription}}</p>
+                              </div>
+                            </template>
                         </div>
                     </div>
                 </div>
@@ -59,6 +51,16 @@
 
 <script>
     export default {
-        name: 'About-us'
+        name: 'About-us',
+        props: {
+          content: {
+            type: Object,
+            default: {}
+          },
+          mission: {
+            type: Object,
+            default: {}
+          }
+        }
     }
 </script>

@@ -7,9 +7,9 @@
 
             <div class="clients">
                 <div class="items">
-                    <div v-for="partner in partnersItems" :key="partner.id" class="item">
+                    <div v-for="partner in content" :key="partner.id" class="item">
                         <div class="item-content">
-                            <img :src="partner.imgSrc" alt="Logo">
+                            <img :src="$imageUrl(partner.plogo, 'sm')" :alt="partner.pname">
                         </div>
                     </div>
                 </div>
@@ -19,14 +19,13 @@
 </template>
 
 <script>
-    import PartnersData from '~/data/index/partnersData.json';
-
     export default {
         name: 'Partners',
-        data() {
-            return {
-                partnersItems: PartnersData.partnersData
-            }
-        }
+        props: {
+          content: {
+            type: Array,
+            default: []
+          }
+        },
     }
 </script>

@@ -5,16 +5,8 @@
                 <router-link title="Home" to="/">Home</router-link>
             </li>
 
-            <li @click="closeOnSameRoute" :class="[currentPage.includes('about-us') ? activeClass : '', 'nav-item']">
-                <router-link title="About us" to="/about-us">About us</router-link>
-            </li>
-
-            <li @click="closeOnSameRoute" :class="[currentPage.includes('services') || currentPage.includes('service-inside') ? activeClass : '', 'nav-item']">
-                <router-link title="Services" to="/services">Services</router-link>
-            </li>
-
-            <li @click="closeOnSameRoute" :class="[currentPage.includes('news') || currentPage.includes('news-single-post') ? activeClass : '', 'nav-item']">
-                <router-link title="News" to="/news">News</router-link>
+            <li @click="closeOnSameRoute" :class="[currentPage.includes('programs') || currentPage.includes('service-inside') ? activeClass : '', 'nav-item']">
+                <router-link title="Services" to="/programs">Programs</router-link>
             </li>
 
             <li @click="closeOnSameRoute" :class="[currentPage.includes('contacts') ? activeClass : '', 'nav-item']">
@@ -29,7 +21,10 @@
               </li>
             </template>
             <template v-else>
-              <li @click="closeOnSameRoute" :class="[currentPage.includes('sign-in') ? activeClass : '', 'nav-item']">
+              <li @click="closeOnSameRoute" class="nav-item">
+                <a href="javascript:void(0)" title="Clinic" @click="getClinicLink">Clinic</a>
+              </li>
+              <li @click="closeOnSameRoute" :class="[currentPage.includes('account') ? activeClass : '', 'nav-item']">
                 <router-link title="My Account" to="/account">My Account</router-link>
               </li>
               <li @click="closeOnSameRoute" class="nav-item">
@@ -51,6 +46,16 @@
             }
         },
         methods: {
+            async getClinicLink(){
+              if (process.browser) {
+                if (this.isLoggedIn) {
+                  const tokenData = await this.get("user/get-token");
+                  window.location.href = `https://clinic.${window.location.hostname}?token=${tokenData.token}`;
+                } else {
+                  window.location.href = `https://clinic.${window.location.hostname}`;
+                }
+              }
+            },
             async signOut() {
               await this.get(`user/sign-out`);
               this.$store.commit("signOut");
@@ -70,6 +75,9 @@
         computed: {
             isGuest() {
               return this.$store.state.authData.accessToken === null;
+            },
+            isLoggedIn(){
+              return this.$store.state.authData.accessToken;
             },
             currentPage() {
                 return this.$route.path;

@@ -2,11 +2,11 @@
     <section id="page-title" class="block">
         <div class="wrapper">
             <div class="title">
-                <h1>Contacts.</h1>
+                <h1>{{title}}</h1>
             </div>
 
             <div class="spacer p-top-lg no-space">
-                <p>But I must explain to you how all this mistaken idea of denouncing pleasure.</p>
+                <p>{{description}}</p>
             </div>
         </div>
     </section>
@@ -14,6 +14,16 @@
 
 <script>
     export default {
-        name: 'PageTitle'
+        name: 'PageTitle',
+        props: {
+          title: {
+            type: String,
+            default: ""
+          },
+          description: {
+            type: String,
+            default: ""
+          }
+        }
     }
 </script>

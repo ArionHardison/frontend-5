@@ -7,13 +7,15 @@
     <main id="main" class="site-main">
       <div class="content">
         <div class="clearfix">
-          <PageTitle />
+          <template v-if="Object.keys(entities).length">
+            <PageTitle :title="entities.home.fblock.pageTitle"/>
 
-          <AboutUs />
+            <AboutUs :content="entities.home.aboutus" :mission="entities.home.ourmission"/>
 
-          <Services />
+            <Services />
 
-          <Partners />
+            <Partners :content="entities.home.partnerslist"/>
+          </template>
         </div>
       </div>
     </main>

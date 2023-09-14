@@ -5,36 +5,38 @@
     <Header logoColor='dark'/>
 
     <main id="main" class="site-main">
-      <PageTitle :title="program.name" />
+      <template v-if="program">
+        <PageTitle :title="program.name" />
 
-      <div id="page-content" class="spacer p-top-xl">
-        <div class="wrapper">
-          <div class="content">
-            <div id="single">
-              <div class="row gutter-width-sm">
-                <div class="col-md-12 col-lg-4 col-xl-4 order-1 order-lg-0 order-xl-0">
-                  <Sidebar :program="program"/>
-                </div>
-
-                <div class="col-xl-8 col-lg-8  col-md-12 order-0 order-lg-1 order-xl-1 single-content">
-                  <div class="img object-fit">
-                    <div class="object-fit-cover">
-                      <img :src="$imageUrl(program.program_image, 'lg', false)" :alt="program.name">
-                    </div>
+        <div id="page-content" class="spacer p-top-xl">
+          <div class="wrapper">
+            <div class="content">
+              <div id="single">
+                <div class="row gutter-width-sm">
+                  <div class="col-md-12 col-lg-4 col-xl-4 order-1 order-lg-0 order-xl-0">
+                    <Sidebar :program="program"/>
                   </div>
 
-                  <Meta :program="program"/>
+                  <div class="col-xl-8 col-lg-8  col-md-12 order-0 order-lg-1 order-xl-1 single-content">
+                    <div class="img object-fit">
+                      <div class="object-fit-cover">
+                        <img :src="$imageUrl(program.program_image, 'md', false)" :alt="program.name">
+                      </div>
+                    </div>
 
-                  <Description :description="program.description"/>
+                    <Meta :program="program"/>
 
-                  <Tags :tags="program.tags"/>
+                    <Description :description="program.description"/>
 
+                    <Tags :tags="program.tags"/>
+
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </template>
     </main>
 
     <Footer />
@@ -51,7 +53,10 @@ import Sidebar from '~/components/blocks/news/Sidebar';
 import Meta from '~/components/blocks/news-single-post/Meta';
 import Description from '~/components/blocks/news-single-post/Description';
 import Tags from '~/components/blocks/news-single-post/Tags';
+
+import api from "../../mixins/api";
 export default {
+  mixins: [api],
   components: {
     Loading,
     Header,
@@ -72,6 +77,20 @@ export default {
   },
   beforeDestroy() {
     document.body.classList.remove( 'single-post' );
+  },
+  created(){
+    this.getProgram()
+  },
+  methods: {
+    async getProgram(){
+      let  program = await this.get(`public/get-program/${this.$getId(this.$route.params.id)}`)
+      if(program){
+        program.author.roles = program.author.roles.map((role)=>{
+          return role.name;
+        });
+        this.program = program;
+      }
+    }
   },
   metaInfo: {
     title: 'Program',

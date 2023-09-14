@@ -1,22 +1,31 @@
 <template>
     <nav class="menu-secondary">
         <ul class="nav">
-            <li v-for="footerItem in FooterItems" :key="footerItem.id" class="nav-item">
-                <a :title="footerItem.title" :href="footerItem.link"><i :class="footerItem.icon"></i></a>
+          <template v-if="facebook">
+            <li class="nav-item">
+              <a :href="facebook"><i class="fab fa-facebook-f"></i></a>
             </li>
+          </template>
+          <template v-if="linked">
+            <li  class="nav-item">
+              <a :href="linked"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+          </template>
         </ul>
     </nav>
 </template>
 
 <script>
-    import FooterData from '~/data/footer/footerData.json';
 
     export default {
         name: 'FooterMenuSecondary',
-        data() {
-            return {
-                FooterItems: FooterData.footerData,
-            }
+        props: {
+          facebook: {
+            type: [String],
+          },
+          linked: {
+            type: [String],
+          },
         }
     }
 </script>

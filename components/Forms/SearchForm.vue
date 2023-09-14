@@ -2,7 +2,7 @@
   <form class="search-form" role="search" @submit.prevent="runSearch">
     <div class="search input-group">
       <input
-          class="form-control form-control-lg"
+          class="form-lg"
           type="text"
           placeholder="Search"
           v-model="searchQuery"

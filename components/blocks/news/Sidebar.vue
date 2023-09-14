@@ -50,7 +50,7 @@
         <nuxt-link to="/auth/login" class="btn btn-1 btn-primary btn-block mt-2 mb-2">Sign In</nuxt-link>
       </template>
     </template>
-    <div class="widget widget_search">
+    <div class="widget widget_search mt-3">
       <SearchForm />
     </div>
     <ProgramCategories />

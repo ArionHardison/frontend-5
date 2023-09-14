@@ -6,7 +6,7 @@
                     <div class="wrapper h-100">
                         <div class="modal-content h-100">
                             <div class="modal-header modal-header-top">
-                                <Logo logoColor="light" />
+                                <Logo :light="true" />
 
                                 <button @click="toggleMenuModal" type="button" class="close btn btn-link border-0 min-w-auto transform-scale-h" data-dismiss="modal" aria-label="Close">
                                     <span class="adveits-i adv-close">

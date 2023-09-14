@@ -83,6 +83,7 @@ export default {
     type: String,
     inputmode: String,
     icon: String,
+    customClass: String,
     mask: false,
     maskData: "",
     autocomplete: String,
