@@ -4,6 +4,7 @@ export default {
     title: 'frontend-5',
     server: {
       host: '0.0.0.0',
+      port: process.env.PORT || 3000
     },
     ssr: true,
     mode: 'universal',
