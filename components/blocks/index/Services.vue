@@ -39,7 +39,7 @@
             }
         },
         async mounted() {
-          let programs = await this.get("public/get-recent-programs");
+          let programs = await this.get("public/get-recent-programs/3");
           this.programs.data = this.getRandomElements(programs.data, 4)
         },
         methods: {
